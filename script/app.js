@@ -31,7 +31,7 @@
 
 		let droppedImage	= event.dataTransfer.getData("draggedImg");
 	//	let currentTrack = event.dataTransfer.getData('targetTrack')   // for audio track
-		event.target.appendChild(document.querySelector(`${droppedImage}`));
+		event.target.appendChild(document.querySelector(`#${droppedImage}`));
 	}
 	// add event handling here -> how is the user going to use our app?
 	// what triggers do we need?
