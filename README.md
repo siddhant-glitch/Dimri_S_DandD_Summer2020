@@ -1,2 +1,2 @@
-# My Awesome Drag and Drop Project
+# Drag and Drop Puzzle
 
