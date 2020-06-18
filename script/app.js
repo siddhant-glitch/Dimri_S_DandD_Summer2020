@@ -1,13 +1,18 @@
 (() => {
 	// set up the puzzle pieces and boards
 	const puzzleButtons = document.querySelectorAll('#buttonHolder img'),
+	//querySelectorAll is for a one to many relationship an dretyurns a nodeList(an array) of match.
 	puzzlePieces = document.querySelectorAll(".puzzle-image"),
 	dropZones = document.querySelectorAll(".drop-zone"),
 	gameBoard = document.querySelector(".puzzle-board");
 
+let imageNames = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
+
 	function changeImageSet() {
 		// change all the image elements on the page -> draggable image sources,
-
+		  imageNames.forEach((piece, index) => {
+			puzzlePieces[index].src = `images/${piece + this.dataset.bgkey}.jpg`;
+		});
 		// and set the drop zone background
 		gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgkey}.jpg)`;
 	}
@@ -20,6 +25,8 @@
 	//	event.dataTransfer.setData("targetTrack", this.dataset.track);   //for audio track
 
 	}
+
+
 
 	function allowDragOver(event) {
 		event.preventDefault(); //for the next week
