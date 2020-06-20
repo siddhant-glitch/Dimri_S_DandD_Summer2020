@@ -9,6 +9,15 @@
 let imageNames = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 
 	function changeImageSet() {
+		//I decided to go with the for loop as i'm a little more comfortable with it.
+		for (let i = 1; i < gameBoard.children.length; i++) {
+		const piece = gameBoard.children[i]
+		if (piece.firstChild) {
+		  const removedPuzzlePiece = piece.removeChild(piece.firstChild)
+		  document.querySelector('.puzzle-pieces').appendChild(removedPuzzlePiece)
+		}
+	  }
+
 		// change all the image elements on the page -> draggable image sources,
 		  imageNames.forEach((piece, index) => {
 			puzzlePieces[index].src = `images/${piece + this.dataset.bgkey}.jpg`;
