@@ -26,7 +26,6 @@ let imageNames = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 	//event.dataTransfer.setData("targetTrack", this.dataset.track);   //for audio track
 	}
 
-
 	function allowDragOver(event) {
 		event.preventDefault(); //for the next week
 		console.log('dragged over me!')
