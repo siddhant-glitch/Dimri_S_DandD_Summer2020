@@ -42,7 +42,6 @@ let imageNames = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 
 	function allowDrop(event) {
 		
-
 		if(!this.hasChildNodes()){
 			event.preventDefault();
 			console.log('dropped!');
